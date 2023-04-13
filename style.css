@@ -1,0 +1,82 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	background-color: rgb(39, 39, 39);
+	color: white;
+}
+
+section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	margin: 100px;
+}
+section:nth-child(even) {
+	background-color: white;
+	color: rgb(39, 39, 39);
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 18px;
+}
+.cards {
+	display: flex;
+}
+
+.card-text {
+	background-color: dodgerblue;
+	margin: 20px;
+	padding: 20px;
+	min-width: 250px;
+	border-radius: 10px;
+}
+.reveal {
+	transform: translateY(50%);
+	opacity: 0;
+	transition: all 2s;
+}
+.reveal.active {
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+	h1 {
+		font-size: 50px;
+	}
+	.cards {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 40px;
+	}
+	.container {
+		margin: 50px;
+	}
+}
